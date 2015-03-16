@@ -1,0 +1,22 @@
+{
+  "name": "quickcheck",
+  "version": "0.0.0",
+  "description": "Wrapper for jscheck",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "author": "Tristan Straub",
+  "license": "MIT",
+  "dependencies": {
+    "jscheck": "^0.2.0",
+    "lodash": "^3.5.0",
+    "random-seed": "^0.2.0"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.9.1",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.2.1",
+    "sinon": "^1.14.0"
+  }
+}
