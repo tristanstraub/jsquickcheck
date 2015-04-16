@@ -1,4 +1,4 @@
-VERSION=0.0.0
+VERSION=0.0.2
 
 all: build
 
@@ -16,7 +16,14 @@ test:
 		--require coffee-script/register \
 		test/*.coffee
 
-publish:
-	tar cvfz jsquickcheck-$(VERSION).tgz package.json lib
+test-watch:
+	@./node_modules/mocha/bin/mocha \
+		--require coffee-script/register \
+		-w --watch-extensions coffee\
+		test/*.coffee
+
+publish: test build
+	tar -zcvf ./jsquickcheck-$(VERSION).tgz -C .. jsquickcheck/package.json jsquickcheck/lib jsquickcheck/README.md
+	npm publish ./jsquickcheck-$(VERSION).tgz
 
 .PHONY: build clean test
