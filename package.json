@@ -1,6 +1,6 @@
 {
   "name": "quickcheck",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Wrapper for jscheck",
   "main": "lib/index.js",
   "scripts": {
